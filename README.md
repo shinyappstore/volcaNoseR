@@ -1,63 +1,7 @@
-# VolcaNoseR
-A Shiny App for making Volcano plots
+![](./s707_GzL7851fyxRbwQPBkncS7blLFB6tq62KpyQlTHLh_logo_251.jpg)
 
+# volcaNoseR: Effortless Volcano Plot Exploration and Visualization
 
-### Running the App
+#### Use app online: __[www.shinyappstore.com/a/volcaNoseR](https://shinyappstore.com/a/volcaNoseR)__
 
-The web-tool runs from a shiny server, and can be accessed at:
-
-o [https://huygens.science.uva.nl/VolcaNoseR/](https://huygens.science.uva.nl/VolcaNoseR/)
-
-o [https://huygens.science.uva.nl/VolcaNoseR2/](https://huygens.science.uva.nl/VolcaNoseR2/)
-
-o [https://amsterdamstudygroup.shinyapps.io/VolcaNoseR/](https://amsterdamstudygroup.shinyapps.io/VolcaNoseR/)
-
-o [https://goedhart.shinyapps.io/VolcaNoseR/](https://goedhart.shinyapps.io/VolcaNoseR/), while bandwidth lasts
-
-Alternatively, the app can run from R/Rstudio and this is perhaps the best option for loading large files. See instructions below
-
-#### Preparations
-Note that the app depends on several R packages that need to be installed (shiny, ggplot2, dplyr, magrittr, ggrepel, DT, shinycssloaders, RCurl, readxl). 
-
-Run this command in R/Rstudio to download and install all the packages (only needs to be done once):
-```
-install.packages("shiny", "tidyverse", "ggrepel", "DT", "shinycssloaders", "RCurl", "readxl", "ggiraph", "htmlwidgets")
-```
-o The first option is running it directly from Github. In the command line (in R or Rstudio) type:
-```
-shiny::runGitHub('VolcaNoseR', 'JoachimGoedhart')
-```
-o The second option is download the app and to use it offline:
-
--download the `app.R` and csv files (`Data-Vulcano-plot.csv` and `elife-45916-Cdc42QL_data.csv`) with example data.
-
--Run RStudio and load `app.R`
-
--Select 'Run All' (shortcut is command-option-R on a Mac) or click on "Run App" (upper right button on the window)
-
-This should launch a web browser with the Shiny app.
-
-
-### Credits
-
-There are several Shiny apps for Volcano plots that have served as a source of inspiration:
-
--[VolcanoR](https://github.com/vovalive/volcanoR)
-
--[Volcanoshiny](https://github.com/hardingnj/volcanoshiny)
-
--[VolcanoPlot_shiny_app](https://github.com/stemicha/VolcanoPlot_shiny_app)
-
-
-VolcaNoseR is created and maintained by Joachim Goedhart ([@joachimgoedhart](https://twitter.com/joachimgoedhart))
-
-### Example output
-
-Standard output generated with the example data:
-
-![alt text](https://github.com/JoachimGoedhart/VolcaNoseR/blob/master/VolcaNoseR_example1.png "Output")
-
-Output with user selected annotation of data:
-
-![alt text](https://github.com/JoachimGoedhart/VolcaNoseR/blob/master/VolcaNoseR_example2.png "Output")
-
+volcaNoseR is a Shiny app for generating and nosing around volcano plots. A volcano plot is a widely used data visualization tool in genomics and statistical analysis. It typically displays gene expression data, where each point represents a gene, with the x-axis indicating the fold change in gene expression between two conditions, and the y-axis representing the statistical significance of that change. The VolcaNoseR app allows user-defined cut-offs for the fold-change and significance. Lists with top candidates are shown and these can be annotated in the plot. In addition, user-selected candidates can be added as labels to the plot. Article: Sci Rep. 2020 Nov 25;10(1):20560. doi: 10.1038/s41598-020-76603-3.
